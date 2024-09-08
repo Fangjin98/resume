@@ -22,7 +22,7 @@
 \datedsubsection{\textbf{University of Science and Technology of China (USTC)}}{Anhui, China}
 \datedsubsection{\textit{Ph.D.} in Computer Science}{2020.9-present}
 \begin{itemize}
-  \item Research focus on Distributed Training, In-network Computing and Programmable Network 
+  \item Research focus on Distributed Training and In-network Computing
   \item Advisors: Prof. Hongli Xu and Prof. Gongming Zhao
 \end{itemize}
 
@@ -35,9 +35,10 @@
 \section{Publications}
 
 \begin{enumerate}
-  \item \textbf{J. Fang}, G. Zhao, H. Xu, Z. Yu, B. Shen, X. Li, Accelerating Distributed Training with Collaborative
+  \item \textbf{J. Fang}, G. Zhao, H. Xu, L. Luo, Z. Yao, A. Xie, Non-Idle Machine-Aware Worker Placement for Efficient Distributed Training in GPU Clusters, IEEE International Conference on Network Protocols (\textbf{ICNP'24})
+  \item \textbf{J. Fang}, G. Zhao, H. Xu, Z. Yu, B. Shen, L. Xie, Accelerating Distributed Training with Collaborative
   In-network Aggregation, IEEE/ACM Transactions on Networking (\textbf{ToN'24})
-  \item \textbf{J. Fang}, G. Zhao, H. Xu, Z. Yu, B. Shen, X. Li, \textit{GOAT: Gradient Scheduling with Collaborative In-Network Aggregation for Distributed Training}, IEEE/ACM International Symposium on Quality of Service (\textbf{IWQoS'23})
+  \item \textbf{J. Fang}, G. Zhao, H. Xu, Z. Yu, B. Shen, L. Xie, \textit{GOAT: Gradient Scheduling with Collaborative In-Network Aggregation for Distributed Training}, IEEE/ACM International Symposium on Quality of Service (\textbf{IWQoS'23})
   \item \textbf{J. Fang}, G. Zhao, H. Xu, C. Wu, Z. Yu, \textit{GRID: Gradient Routing with In-network Aggregation for Distributed Training}, IEEE/ACM Transactions on Networking (\textbf{ToN'23})
   \item \textbf{J. Fang}, G. Zhao, H. Xu, H. Tu, H. Wang, \textit{Reveal: Robustness-Aware VNF Placement and Request Scheduling in Edge Clouds}, Computer Networks (\textbf{ComNet'23})
   % \item \textbf{J. Fang}, G. Zhao, H. Xu, Z. Yu, J. Jiang, F. Zeng, Injecting Failure for Success: Towards General,
@@ -47,6 +48,15 @@
 \end{enumerate}
 
 \section{Experience}
+
+\datedsubsection{\textbf{Communication-Computation Fused GPU Kernel Generation}}{Bytedance AML, Beijing, China}
+\datedsubsection{\textit{Research Intern}}{2024.6-Present}
+\begin{itemize}
+  \item Implement collective communication operations (e.g., AllGather) based on Triton and NVSHMEM
+  \item Design and implement communication-computation fused operations (e.g., AllGather+GEMM), exploring overlaps between GEMM and collective communications
+  \item Optimize GPU memory access cost by organizing thread block layouts
+  \item Achieve near-optimized bandwidth utilization (200GBps) on A100*8 NVlink machines
+\end{itemize}
 
 \datedsubsection{\textbf{Optimizing Worker Placement for Distributed Training in OCS Network}}{Huawei 2012 Lab, Hefei, China}
 \datedsubsection{\textit{Research Intern}}{2023.12-2024.5}
@@ -109,23 +119,21 @@
   \item H. Xu, \textbf{J. Fang}, G. Zhao, H. Tu, H. Wang, \textit{A VNF placement method in the edge cloud}, CN113961324A
 \end{enumerate}
 
-\section{Courses}
+% \section{Courses}
 
-\begin{itemize}[parsep=0.5ex]
-  \item \datedline{COMP6002P, Combinatorial Mathematics}{89/100}
-  \item \datedline{COMP6201P, Parallel Programming}{86/100}
-  \item \datedline{COMP7102P, Advanced Algorithm Design and Analysis}{91/100}
-\end{itemize}
+% \begin{itemize}[parsep=0.5ex]
+%   \item \datedline{COMP6002P, Combinatorial Mathematics}{89/100}
+%   \item \datedline{COMP6201P, Parallel Programming}{86/100}
+%   \item \datedline{COMP7102P, Advanced Algorithm Design and Analysis}{91/100}
+% \end{itemize}
 
 \section{Awards}
 
 \begin{itemize}[parsep=0.5ex]
   \item \datedline{Guorui scholarship}{2023}
-  \item \datedline{Doctoral first-class academic scholarship}{2023}
   \item \datedline{Excellent price (25\%) in Intel P4 China Hackthon}{2022}
-  \item \datedline{Doctoral first-class academic scholarship}{2022}
-  \item \datedline{Master's first-class study scholarship}{2021}
-  \item \datedline{Master's first-class study scholarship}{2020}
+  \item \datedline{Doctoral first-class academic scholarship}{2022, 2023}
+  \item \datedline{Master's first-class study scholarship}{2020, 2021}
 \end{itemize}
 
 \section{Skills}
