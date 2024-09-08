@@ -39,7 +39,7 @@
 
 \datedsubsection{\textbf{中国科学技术大学} \qquad \textit{硕博连读} \qquad 计算机科学与技术}{2020.9-2025.6 (预计)}
 \begin{itemize}
-  \item 研究方向: 数据中心网络、可编程网络、分布式训练、在网计算
+  \item 研究方向: 分布式训练、在网计算
   \item 导师：徐宏力、赵功名
 \end{itemize}
 
@@ -50,8 +50,17 @@
 
 \section{项目经历}
 
+\datedsubsection{\textbf{计算通信融合算子自动生成}}{字节跳动-豆包大模型，北京}
+\datedsubsection{\textit{主要开发者}}{2024.6-至今}
+\begin{itemize}[parsep=0.5ex]
+  \item 分布式训练/推理任务中计算和通信算子交替执行，通过挖掘计算通信可重叠部分，编写融合算子，可以加速分布式训练/推理任务
+  \item 基于 Triton 和 NVSHMEM 实现跨 rank load/store tensor，编写常见集合通信算子
+  \item 实现通信模式均衡的融合算子（如 AllGather+GEMM），优化 GPU 全局内存读写成本，优化 Triton Kernel 性能
+  \item 给定线上 shape 张量，在 A100 NVLINK 机型和 H100 NVLINK 机型均能达到接近满速通信，性能优于 Pytorch 实现
+\end{itemize}
+
 \datedsubsection{\textbf{优化光网络下分布式训练节点部署工作}}{华为2012中央研究院，合肥}
-\datedsubsection{\textit{技术点负责人}}{2023.12-2024.5}
+\datedsubsection{\textit{主要开发者}}{2023.12-2024.5}
 \begin{itemize}[parsep=0.5ex]
   \item 大模型的分布式训练任务具有算力亲和性，然而算力由多层机间网络互联、带宽异构，导致跨节点网络成为训练瓶颈
   \item 调研现有大模型任务部署和算力调度优化方案，熟悉常见模型并行和数据并行方法
@@ -112,30 +121,30 @@
 \section{学术成果}
 
 \begin{enumerate}[parsep=0.5ex]
-  \item \textbf{J. Fang}, G. Zhao, H. Xu, Z. Yu, B. Shen, X. Li, \textit{Accelerating Distributed Training with Collaborative In-network Aggregation}, IEEE/ACM Transactions on Networking (\textbf{ToN}), 2024, CCF A
+  \item \textbf{J. Fang}, G. Zhao, H. Xu, L. Luo, Z. Yao, A. Xie, \textit{Non-Idle Machine-Aware Worker Placement for Efficient Distributed Training in GPU Clusters}, IEEE International Conference on Network Protocols (\textbf{ICNP'24})
+  \item \textbf{J. Fang}, G. Zhao, H. Xu, Z. Yu, B. Shen, L. Xie, \textit{Accelerating Distributed Training with Collaborative In-network Aggregation}, IEEE/ACM Transactions on Networking (\textbf{ToN}), 2024, CCF A
   \item \textbf{J. Fang}, G. Zhao, H. Xu, C. Wu, Z. Yu, \textit{GRID: Gradient Routing with In-network Aggregation for Distributed Training}, IEEE/ACM Transactions on Networking (\textbf{ToN}), 2023, CCF A
-  \item \textbf{J. Fang}, G. Zhao, H. Xu, Z. Yu, B. Shen, X. Li, \textit{GOAT: Gradient Scheduling with Collaborative In-Network Aggregation for Distributed Training}, IEEE/ACM International Symposium on Quality of Service (\textbf{IWQoS}), 2023, CCF B
+  \item \textbf{J. Fang}, G. Zhao, H. Xu, Z. Yu, B. Shen, L. Xie, \textit{GOAT: Gradient Scheduling with Collaborative In-Network Aggregation for Distributed Training}, IEEE/ACM International Symposium on Quality of Service (\textbf{IWQoS}), 2023, CCF B
   \item \textbf{J. Fang}, G. Zhao, H. Xu, H. Tu, H. Wang, \textit{Reveal: Robustness-Aware VNF Placement and Request Scheduling in Edge Clouds}, Computer Networks (\textbf{ComNet}), 2023, CCF B
-  % \item (在投) \textbf{J. Fang}, G. Zhao, H. Xu, Z. Yu, J. Jiang, F. Zeng, \textit{Injecting Failure for Success: Towards General, Flexible and Efficient Network Fault Injection}, USENIX ATC, 2024, CCF A
   \item J. Liu, Y. Zhai, G. Zhao, H. Xu, \textbf{J. Fang}, Z. Zeng, Y. Zhu, InArt: In-Network Aggregation with Route Selection for Accelerating Distributed Training, International World Wide Web Conference (\textbf{WWW}), 2024, CCF A
   \item 赵功名, \textbf{方缙}, 徐宏力, 吴昌博, \textit{PS架构下基于可编程交换机的梯度调度方法和装置}, 已授权
   \item 徐宏力, \textbf{方缙}, 赵功名, 凃化清, 汪海波, \textit{一种边缘云系统中的VNF部署调度方法}, 已公开
 \end{enumerate}
 
-\section{奖项荣誉}
+% \section{奖项荣誉}
 
-\begin{itemize}[parsep=0.5ex]
-  \item \datedline{中国电科十四所国睿奖学金}{2023}
-  \item \datedline{英特尔 P4 中国黑客松优胜奖}{2022}
-  \item \datedline{一等学业奖学金（博士）$\times 2$}{2022, 2023}
-  \item \datedline{一等学业奖学金（硕士）$\times 2$}{2020, 2021}
-\end{itemize}
+% \begin{itemize}[parsep=0.5ex]
+%   \item \datedline{中国电科十四所国睿奖学金}{2023}
+%   \item \datedline{英特尔 P4 中国黑客松优胜奖}{2022}
+%   \item \datedline{一等学业奖学金（博士）$\times 2$}{2022, 2023}
+%   \item \datedline{一等学业奖学金（硕士）$\times 2$}{2020, 2021}
+% \end{itemize}
 
-\section{专业技能}
+% \section{专业技能}
 
-\begin{itemize}[parsep=0.5ex]
-  \item 编程语言: Python, C/C++, P4, C\#, Swift
-  \item 开发框架: Pytorch, p4c, eBPF, Mininet
-\end{itemize}
+% \begin{itemize}[parsep=0.5ex]
+%   \item 编程语言: Python, C/C++, P4, C\#, Swift
+%   \item 开发框架: Pytorch, p4c, eBPF, Mininet
+% \end{itemize}
 
 \end{document}
