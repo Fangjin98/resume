@@ -69,7 +69,7 @@
 \datedsubsection{\textbf{针对自研硬件实现集合通信算子}}{字节跳动-Seed (AI Infra)，北京}
 \datedsubsection{\textit{主要开发者}}{2024.10-2025.1}
 \begin{itemize}[parsep=0.5ex]
-  \item 基于 RDMA 编程为自研硬件实现集合通信库，包括 AllGather和 AlltoALL 算子。
+  \item 基于 RDMA 编程为自研硬件实现集合通信库，包括 AllGather和 AlltoAll 算子。
   \item 针对主机带宽受限的自研机型，形式化 ILP 问题并设计主机选路算法优化性能
   \item 在网卡 1 拖 2/4/8 场景下优化集合通信算法，优化后性能达到物理极限带宽
 \end{itemize}
@@ -145,13 +145,16 @@
 \section{学术成果}
 
 \begin{enumerate}[parsep=0.5ex]
-  \item \textbf{J. Fang}, G. Zhao, H. Xu, L. Luo, Z. Yao, A. Xie, \textit{Non-Idle Machine-Aware Worker Placement for Efficient Distributed Training in GPU Clusters}, IEEE International Conference on Network Protocols (\textbf{ICNP'24})
-  \item \textbf{J. Fang}, G. Zhao, H. Xu, Z. Yu, B. Shen, L. Xie, \textit{Accelerating Distributed Training with Collaborative In-network Aggregation}, IEEE/ACM Transactions on Networking (\textbf{ToN}), 2024, CCF A
-  \item \textbf{J. Fang}, G. Zhao, H. Xu, C. Wu, Z. Yu, \textit{GRID: Gradient Routing with In-network Aggregation for Distributed Training}, IEEE/ACM Transactions on Networking (\textbf{ToN}), 2023, CCF A
-  \item \textbf{J. Fang}, G. Zhao, H. Xu, Z. Yu, B. Shen, L. Xie, \textit{GOAT: Gradient Scheduling with Collaborative In-Network Aggregation for Distributed Training}, IEEE/ACM International Symposium on Quality of Service (\textbf{IWQoS}), 2023, CCF B
-  \item \textbf{J. Fang}, G. Zhao, H. Xu, H. Tu, H. Wang, \textit{Reveal: Robustness-Aware VNF Placement and Request Scheduling in Edge Clouds}, Computer Networks (\textbf{ComNet}), 2023, CCF B
-  \item J. Liu, Y. Zhai, G. Zhao, H. Xu, \textbf{J. Fang}, Z. Zeng, Y. Zhu, InArt: In-Network Aggregation with Route Selection for Accelerating Distributed Training, International World Wide Web Conference (\textbf{WWW}), 2024, CCF A
-  \item 赵功名, \textbf{方缙}, 徐宏力, 吴昌博, \textit{PS架构下基于可编程交换机的梯度调度方法和装置}, 已授权
+  \item S. Zheng, W. Bao, Q. Hou, X. Zheng, \textbf{J. Fang}, etc, \textit{Triton-distributed: Programming Overlapping Kernels on Distributed AI Systems with the Triton Compiler},  (\textbf{Arxiv})
+  \item S. Zheng, \textbf{J. Fang}, X. Zheng, Q. Hou, W. Bao, N. Zheng, Z. Jiang, D. Wang, J. Ye, H. Lin, L. Chang, X. Liu, \textit{TileLink: Generating Efficient Compute-Communication Overlapping Kernels using Tile-Centric Primitives}, (\textbf{MLSys'25})
+  \item \textbf{J. Fang}, G. Zhao, H. Xu, L. Luo, Z. Yao, A. Xie, \textit{Non-Idle Machine-Aware Worker Placement for Efficient Distributed Training in GPU Clusters}, (\textbf{ICNP'24}), CCF B
+  \item \textbf{J. Fang}, G. Zhao, H. Xu, Z. Yu, B. Shen, L. Xie, \textit{Accelerating Distributed Training with Collaborative In-network Aggregation}, (\textbf{ToN'24}), CCF A
+  \item J. Liu, Y. Zhai, G. Zhao, H. Xu, \textbf{J. Fang}, Z. Zeng, Y. Zhu, InArt: In-Network Aggregation with Route Selection for Accelerating Distributed Training, (\textbf{WWW'24}), CCF A
+  \item \textbf{J. Fang}, G. Zhao, H. Xu, C. Wu, Z. Yu, \textit{GRID: Gradient Routing with In-network Aggregation for Distributed Training}, (\textbf{ToN'23}), CCF A
+  \item \textbf{J. Fang}, G. Zhao, H. Xu, Z. Yu, B. Shen, L. Xie, \textit{GOAT: Gradient Scheduling with Collaborative In-Network Aggregation for Distributed Training}, (\textbf{IWQoS'23}), CCF B
+  \item \textbf{J. Fang}, G. Zhao, H. Xu, H. Tu, H. Wang, \textit{Reveal: Robustness-Aware VNF Placement and Request Scheduling in Edge Clouds}, (\textbf{ComNet'23}), CCF B
+ 
+  % \item 赵功名, \textbf{方缙}, 徐宏力, 吴昌博, \textit{PS架构下基于可编程交换机的梯度调度方法和装置}, 已授权
   % \item 徐宏力, \textbf{方缙}, 赵功名, 凃化清, 汪海波, \textit{一种边缘云系统中的VNF部署调度方法}, 已公开
 \end{enumerate}
 
