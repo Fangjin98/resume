@@ -58,8 +58,16 @@
   \item 负责项目日常维护等工作
 \end{itemize}
 
+\datedsubsection{\textbf{基于 GPU 主导通信的集合通信库设计与实现}}{字节跳动-Seed (AI Infra)，北京}
+\datedsubsection{\textit{主要开发者}}{2024.12-至今}
+\begin{itemize}[parsep=0.5ex]
+  \item 分析 DeepEP 通信模式与性能瓶颈，复现实验并撰写分析报告
+  \item 研究 GPU 与网卡性能调优机制，优化内部 AlltoAll 算子性能
+  \item 设计通用 GPU 主导通信库，针对 AMD、寒武纪等平台实现 GPU 主导通信
+\end{itemize}
+
 \datedsubsection{\textbf{针对自研硬件实现集合通信算子}}{字节跳动-Seed (AI Infra)，北京}
-\datedsubsection{\textit{核心开发者}}{2025.3-至今}
+\datedsubsection{\textit{主要开发者}}{2024.10-2025.1}
 \begin{itemize}[parsep=0.5ex]
   \item 基于 RDMA 编程为自研硬件实现集合通信库，包括 AllGather和 AlltoALL 算子。
   \item 针对主机带宽受限的自研机型，形式化 ILP 问题并设计主机选路算法优化性能
@@ -67,7 +75,7 @@
 \end{itemize}
 
 \datedsubsection{\textbf{计算通信融合算子自动生成}}{字节跳动-Seed (AI Infra)，北京}
-\datedsubsection{\textit{核心开发者}}{2024.6-2025.3}
+\datedsubsection{\textit{主要开发者}}{2024.6-2025.3}
 \begin{itemize}[parsep=0.5ex]
   \item 分布式训练/推理任务中计算和通信算子交替执行，通过挖掘计算通信可重叠部分，编写融合算子，可以加速分布式训练/推理任务
   \item 基于 NVSHMEM 为 Triton 扩展分布式编程功能，能够直接借助 Triton 生态编写集合通信算子
@@ -156,11 +164,11 @@
   \item \datedline{一等学业奖学金（硕士）$\times 2$}{2020, 2021}
 \end{itemize}
 
-\section{专业技能}
+% \section{专业技能}
 
-\begin{itemize}[parsep=0.5ex]
-  \item 编程语言: Python, C/C++, P4, C\#, Swift
-  \item 开发框架: Triton, Pytorch, p4c, eBPF, Mininet
-\end{itemize}
+% \begin{itemize}[parsep=0.5ex]
+%   \item 编程语言: Python, C/C++, P4, C\#, Swift
+%   \item 开发框架: Triton, Pytorch, p4c, eBPF, Mininet
+% \end{itemize}
 
 \end{document}
