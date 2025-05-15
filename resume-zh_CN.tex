@@ -37,7 +37,7 @@
 
 \section{教育背景}
 
-\datedsubsection{\textbf{中国科学技术大学} \qquad \textit{硕博连读} \qquad 计算机科学与技术}{2020.9-2025.6 (预计)}
+\datedsubsection{\textbf{中国科学技术大学} \qquad \textit{硕博连读} \qquad 计算机科学与技术}{2020.9-2026.6 (预计)}
 \begin{itemize}
   \item 研究方向: 分布式训练、在网计算
   \item 导师：徐宏力、赵功名
@@ -50,16 +50,32 @@
 
 \section{项目经历}
 
-\datedsubsection{\textbf{计算通信融合算子自动生成}}{字节跳动-豆包大模型，北京}
-\datedsubsection{\textit{主要开发者}}{2024.6-至今}
+\datedsubsection{\href{https://github.com/ByteDance-Seed/Triton-distributed}{\textbf{开源项目 Triton-Distributed}}}{字节跳动-Seed (AI Infra)，北京}
+\datedsubsection{\textit{核心开发者}}{}
 \begin{itemize}[parsep=0.5ex]
-  \item 分布式训练/推理任务中计算和通信算子交替执行，通过挖掘计算通信可重叠部分，编写融合算子，可以加速分布式训练/推理任务
-  \item 基于 Triton 和 NVSHMEM 实现跨 rank load/store tensor，编写常见集合通信算子
-  \item 实现通信模式均衡的融合算子（如 AllGather+GEMM），优化 GPU 全局内存读写成本，优化 Triton Kernel 性能
-  \item 给定线上 shape 张量，在 A100 NVLINK 机型和 H100 NVLINK 机型均能达到接近满速通信，性能优于 Pytorch 实现
+  \item 负责跨机计算通信融合算子开发，开发实现 AG+GEMM、AG+MoE 在 H800 上的融合算子
+  \item 负责 GPU 跨机通信优化，基于多 QP 技术优化 All-to-All 算子在大规模 H20 集群上的性能
+  \item 负责项目日常维护等工作
 \end{itemize}
 
-\datedsubsection{\textbf{优化光网络下分布式训练节点部署工作}}{华为2012中央研究院，合肥}
+\datedsubsection{\textbf{针对自研硬件实现集合通信算子}}{字节跳动-Seed (AI Infra)，北京}
+\datedsubsection{\textit{核心开发者}}{2025.3-至今}
+\begin{itemize}[parsep=0.5ex]
+  \item 基于 RDMA 编程为自研硬件实现集合通信库，包括 AllGather和 AlltoALL 算子。
+  \item 针对主机带宽受限的自研机型，形式化 ILP 问题并设计主机选路算法优化性能
+  \item 在网卡 1 拖 2/4/8 场景下优化集合通信算法，优化后性能达到物理极限带宽
+\end{itemize}
+
+\datedsubsection{\textbf{计算通信融合算子自动生成}}{字节跳动-Seed (AI Infra)，北京}
+\datedsubsection{\textit{核心开发者}}{2024.6-2025.3}
+\begin{itemize}[parsep=0.5ex]
+  \item 分布式训练/推理任务中计算和通信算子交替执行，通过挖掘计算通信可重叠部分，编写融合算子，可以加速分布式训练/推理任务
+  \item 基于 NVSHMEM 为 Triton 扩展分布式编程功能，能够直接借助 Triton 生态编写集合通信算子
+  \item 实现跨卡和跨机的融合算子，分析 GPU 全局内存读写成本，优化算子性能
+  \item 相比较非融合算子，实现性能提升 1.17 倍 到 20.76 倍
+\end{itemize}
+
+\datedsubsection{\textbf{大规模分布式训练任务在光网络中的节点部署优化}}{华为2012中央研究院，合肥}
 \datedsubsection{\textit{主要开发者}}{2023.12-2024.5}
 \begin{itemize}[parsep=0.5ex]
   \item 大模型的分布式训练任务具有算力亲和性，然而算力由多层机间网络互联、带宽异构，导致跨节点网络成为训练瓶颈
@@ -69,13 +85,13 @@
   \item 设计任务部署算法降低光网络下跨机架任务通信量
 \end{itemize}
 
-\datedsubsection{\textbf{下一代云原生 SDN 平台开发测试}}{华为美研院 (Futurewei)，远程}
-\datedsubsection{\textit{项目开发}}{2021.6-2021.9}
-\begin{itemize}[parsep=0.5ex]
-  \item 针对大规模测试实验编写自动化测试bash脚本
-  \item 基于 C++ 编写端到端虚拟网络控制面测试案例
-  \item 基于 C++ 开发 Pulsar 消息队列订阅特性 (\href{https://github.com/futurewei-cloud/alcor-control-agent/pull/274}{\textit{PR \#274}})
-\end{itemize}
+% \datedsubsection{\textbf{下一代云原生 SDN 平台开发测试}}{华为美研院 (Futurewei)，远程}
+% \datedsubsection{\textit{项目开发}}{2021.6-2021.9}
+% \begin{itemize}[parsep=0.5ex]
+%   \item 针对大规模测试实验编写自动化测试bash脚本
+%   \item 基于 C++ 编写端到端虚拟网络控制面测试案例
+%   \item 基于 C++ 开发 Pulsar 消息队列订阅特性 (\href{https://github.com/futurewei-cloud/alcor-control-agent/pull/274}{\textit{PR \#274}})
+% \end{itemize}
 
 \section{科研经历}
 
@@ -100,14 +116,14 @@
   \item 相比较现有方案，降低分布式训练通信负载 $81.2\%$
 \end{itemize}
 
-\datedsubsection{\textbf{面向边缘云考虑鲁棒性的虚拟网络功能部署算法}}{中科大，合肥}
-\datedsubsection{\textit{主要开发者}}{2021.2-2021.6}
-\begin{itemize}[parsep=0.5ex]
-  \item 边缘云的性能往往受到恶意用户和虚拟网络功能 (VNF)的影响，本文考虑限制恶意用户和 VNF 影响范围，提升边缘云鲁棒性
-  \item 考虑到VNF部署和用户请求调度往往在不同时间维度，设计了一个离线算法决策VNF部署以及在线算法执行请求调度
-  \item 基于 Python 实现了包含 6 台 Nvidia Jetson Tx2s 和 20 台 Raspberry Pis 的原型系统 (\href{https://github.com/Fangjin98/reveal-src}{\textit{链接}})
-  \item 实验结果表明，在异常情况下该方案能够提升网络吞吐率 $57\%$
-\end{itemize}
+% \datedsubsection{\textbf{面向边缘云考虑鲁棒性的虚拟网络功能部署算法}}{中科大，合肥}
+% \datedsubsection{\textit{主要开发者}}{2021.2-2021.6}
+% \begin{itemize}[parsep=0.5ex]
+%   \item 边缘云的性能往往受到恶意用户和虚拟网络功能 (VNF)的影响，本文考虑限制恶意用户和 VNF 影响范围，提升边缘云鲁棒性
+%   \item 考虑到VNF部署和用户请求调度往往在不同时间维度，设计了一个离线算法决策VNF部署以及在线算法执行请求调度
+%   \item 基于 Python 实现了包含 6 台 Nvidia Jetson Tx2s 和 20 台 Raspberry Pis 的原型系统 (\href{https://github.com/Fangjin98/reveal-src}{\textit{链接}})
+%   \item 实验结果表明，在异常情况下该方案能够提升网络吞吐率 $57\%$
+% \end{itemize}
 
 % \datedsubsection{\textbf{基于 FPGA 高层次综合实现 LSTM 模型}}{湖南大学，长沙}
 % \datedsubsection{\textit{本科毕设项目}}{2019.6-2020.1}
