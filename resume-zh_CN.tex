@@ -39,7 +39,7 @@
 
 \datedsubsection{\textbf{中国科学技术大学} \qquad \textit{硕博连读} \qquad 计算机科学与技术}{2020.9-2026.6 (预计)}
 \begin{itemize}
-  \item 研究方向: 分布式训练、在网计算
+  \item 研究方向: 机器学习系统、可编程网络
   \item 导师：徐宏力、赵功名
 \end{itemize}
 
@@ -53,9 +53,9 @@
 \datedsubsection{\href{https://github.com/ByteDance-Seed/Triton-distributed}{\textbf{开源项目 Triton-Distributed}}}{字节跳动-Seed (AI Infra)，北京}
 \datedsubsection{\textit{核心开发者}}{}
 \begin{itemize}[parsep=0.5ex]
-  \item 负责跨机计算通信融合算子开发，开发实现 AG+GEMM、AG+MoE 在 H800 上的融合算子
+  \item 负责开发实现融合算子 AG+GEMM、AG+MoE、GEMM+AR 在 H800/L20/A800 上的融合算子
   \item 负责 GPU 跨机通信优化，基于多 QP 技术优化 All-to-All 算子在大规模 H20 集群上的性能
-  \item 负责项目日常维护等工作
+  \item GEMM+AR 算子端到端性能提升 $18\%$ (Prefill), $30\%$ (Decode)，预计接入 SGLang 
 \end{itemize}
 
 \datedsubsection{\textbf{基于 GPU 主导通信的集合通信库设计与实现}}{字节跳动-Seed (AI Infra)，北京}
@@ -72,6 +72,7 @@
   \item 基于 RDMA 编程为自研硬件实现集合通信库，包括 AllGather和 AlltoAll 算子。
   \item 针对主机带宽受限的自研机型，形式化 ILP 问题并设计主机选路算法优化性能
   \item 在网卡 1 拖 2/4/8 场景下优化集合通信算法，优化后性能达到物理极限带宽
+  \item 集合通信算子已上线内部豆包大模型多模态推理模块
 \end{itemize}
 
 \datedsubsection{\textbf{计算通信融合算子自动生成}}{字节跳动-Seed (AI Infra)，北京}
@@ -88,9 +89,8 @@
 \begin{itemize}[parsep=0.5ex]
   \item 大模型的分布式训练任务具有算力亲和性，然而算力由多层机间网络互联、带宽异构，导致跨节点网络成为训练瓶颈
   \item 调研现有大模型任务部署和算力调度优化方案，熟悉常见模型并行和数据并行方法
-  \item 调研现有模型压缩工作，熟悉稀疏模型训练优化方法
-  \item 对不同集合通信算法下的物理节点和逻辑节点通信模式建模，分析通信拓扑、链路对任务训练时间的影响
-  \item 设计任务部署算法降低光网络下跨机架任务通信量
+  % \item 调研现有模型压缩工作，熟悉稀疏模型训练优化方法
+  \item 对不同集合通信算法下的物理节点和逻辑节点通信模式建模，分析通信拓扑、链路对任务训练时间的影响，设计任务部署算法降低光网络下跨机架任务通信量
 \end{itemize}
 
 % \datedsubsection{\textbf{下一代云原生 SDN 平台开发测试}}{华为美研院 (Futurewei)，远程}
@@ -107,9 +107,9 @@
 \datedsubsection{\textit{主要开发者}}{2022.12-2023.9}
 \begin{itemize}[parsep=0.5ex]
   \item 基于端主机的故障注入难以覆盖大量复杂网络故障场景，且无法针对应用流量精准注入故障
-  \item 基于可编程控制面设计并实现用户友好的多后端故障注入系统，提供一系列参数供用户自定义流量协议
-  \item 针对流依赖和流过滤，设计一个解析器生成算法，能够根据用户指示生成对应数据面程序
-  \item 针对多租户和路由路径，形式化故障注入点选择问题
+  \item 基于可编程控制面设计并实现多后端故障注入系统，提供一系列参数供用户自定义流量协议
+  % \item 针对流依赖和流过滤，设计一个解析器生成算法，能够根据用户指示生成对应数据面程序
+  % \item 针对多租户和路由路径，形式化故障注入点选择问题
   \item 针对异构多后端网络设备，基于 P4 TNA 和 PSA 架构实现多种网络功能，系统资源消耗小于10\%
   \item 在4个流行的分布式系统任务 (Horovod, Redis, RDMA, Kafka) 中测试该系统并验证故障注入效果
 \end{itemize}
@@ -119,7 +119,7 @@
 \begin{itemize}[parsep=0.5ex]
   \item 大规模分布式模型训练具有通信瓶颈，该项目通过可编程交换机在网内聚合梯度以降低通信量，从而加速分布式模型训练
   \item 针对流量可变性，设计基于随机舍入算法解决网内聚合场景下的梯度路由问题
-  \item 基于 Pytorch 实现包含 8 台服务器的 PS 架构分布式模型训练原型系统，主机间通过自定义协议进行通信 (\href{https://github.com/Fangjin98/distributed-training-INA/}{\textit{链接}})
+  \item 基于 Pytorch 实现 8 机 PS 架构分布式模型训练原型系统 (\href{https://github.com/Fangjin98/distributed-training-INA/}{\textit{链接}})
   \item 基于 Intel Tofino 可编程交换机实现网内聚合逻辑，并与主机端实现协同训练
   \item 相比较现有方案，降低分布式训练通信负载 $81.2\%$
 \end{itemize}
@@ -145,6 +145,8 @@
 \section{学术成果}
 
 \begin{enumerate}[parsep=0.5ex]
+   \item \textbf{J. Fang}, S. Zheng, X. Di, H. Gong, etc, \textit{Deploying Collective Kernels for Heterogeneous Links Using Tensor-Centric Primitives},  (\textbf{EuroSys'26, In Submission})
+   \item S. Zheng, X. Zheng, S. Li, H. Sun, Q. Hou, \textbf{J. Fang}, etc, \textit{DITRON: A Flexible and Versatile Distributed Tensor Compiler for LLM},  (\textbf{ICLR'26, In Submission})
   \item S. Zheng, W. Bao, Q. Hou, X. Zheng, \textbf{J. Fang}, etc, \textit{Triton-distributed: Programming Overlapping Kernels on Distributed AI Systems with the Triton Compiler},  (\textbf{Arxiv})
   \item S. Zheng, \textbf{J. Fang}, X. Zheng, Q. Hou, W. Bao, N. Zheng, Z. Jiang, D. Wang, J. Ye, H. Lin, L. Chang, X. Liu, \textit{TileLink: Generating Efficient Compute-Communication Overlapping Kernels using Tile-Centric Primitives}, (\textbf{MLSys'25})
   \item \textbf{J. Fang}, G. Zhao, H. Xu, L. Luo, Z. Yao, A. Xie, \textit{Non-Idle Machine-Aware Worker Placement for Efficient Distributed Training in GPU Clusters}, (\textbf{ICNP'24}), CCF B
@@ -161,9 +163,10 @@
 \section{奖项荣誉}
 
 \begin{itemize}[parsep=0.5ex]
+  \item \datedline{第一届 CCF ACNC 集合通信比赛一等奖（1/77）}{2025}
   \item \datedline{中国电科十四所国睿奖学金}{2023}
   \item \datedline{英特尔 P4 中国黑客松优胜奖}{2022}
-  \item \datedline{一等学业奖学金（博士）$\times 2$}{2022, 2023}
+  \item \datedline{一等学业奖学金（博士）$\times 2$}{2022, 2023, 2024}
   \item \datedline{一等学业奖学金（硕士）$\times 2$}{2020, 2021}
 \end{itemize}
 
